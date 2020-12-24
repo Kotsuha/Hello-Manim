@@ -1,0 +1,40 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "label": "manim preview",
+            "type": "shell",
+            "command": "cd \"${fileDirname}\" & python \"D:\\PythonScript\\manim\\manim.py\" \"${fileBasename}\" ${input:sceneName} -pl",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "manim clean",
+            "type": "shell",
+            "command": "cd \"${fileDirname}\" & rd /S /Q \"media\"",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "sceneName",
+            "description": "Name of the Scene class you want to see",
+            "default": "SquareToCircle",
+            "type": "promptString"
+        },
+    ]
+}
