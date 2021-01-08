@@ -21,7 +21,7 @@
             "id": "sceneName",
             "description": "Name of the Scene class you want to see",
             "default": "SquareToCircle",
-            "type": "promptString"
+            "type": "memento.promptString"
         },
     ]
 }
