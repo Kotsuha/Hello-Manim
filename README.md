@@ -1,0 +1,1 @@
+This is a VSCode project. It requires the "Memento Inputs" extension for task.json to work.
